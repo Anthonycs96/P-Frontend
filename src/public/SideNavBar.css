@@ -1,0 +1,110 @@
+.sidebar {
+    width: 170px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: width 0.5s ease-in-out;
+    }
+    
+    .sidebar.close {
+    width: 100px;
+    transition: .5s;
+    }
+    
+    .sidebar .logo-web {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    transition: margin-left 0.5s ease-in-out;
+    }
+    
+    .sidebar.close .logo-web {
+    margin-left: 10px;
+    }
+    
+    .sidebar .titulo-web {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    transition: margin-left 0.5s ease-in-out;
+    }
+    
+    .sidebar.close .titulo-web {
+        transition-duration: 0.1s;
+    display: none;
+    margin-left: -60px;
+    }
+    
+    .sidebar .toggle {
+        position: absolute;
+        top: 10px;
+        right: -15px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        cursor: default;
+        transition: all 0.3s ease-in-out;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ec7c6a;
+    }
+    .sidebar .toggle:hover {
+        cursor: pointer;
+        background-color: #f33b1f;
+    }
+    
+    
+    .sidebar.close .toggle {
+    transform: rotate(180deg);
+    }
+    
+    .sidebar .opacidad {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    }
+    
+    .sidebar.close .opacidad {
+    opacity: 0;
+    }
+    main {
+      margin-left: 20px; /* Margen izquierdo de 20 píxeles */
+    }
+
+      .sidebar.close + nav + main {
+        margin-left: 0;
+        transition: margin-left 0.3s ease-in-out;
+      } 
+      .sidebar + nav + main {
+        margin-left: 80px;
+        transition: margin-left 0.3s ease-in-out;
+      }
+      .selected {
+        background-color: #262837;
+      }
+
+      li.selected a {
+        background-color: #ec7c6a;
+        color: #fff;
+        
+      }
+      /* @media only screen and (max-width: 1062px) {
+        .grid > div > img {
+          border-radius: 50%;
+        }
+      }
+       */
+       .overflow-scroll::-webkit-scrollbar {
+        display: none;
+      }
+/* Estilos para el menú desplegable */
+
+
+/* Mostrar el menú desplegable al hacer click en el botón */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
